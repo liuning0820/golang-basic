@@ -1,36 +1,34 @@
 package main
 
-import "fmt"
-import "os"
-import "log"
-import "bufio"
-import "strings"
+import (
+	"bufio"
+	"fmt"
+	"log"
+	"os"
+	"strings"
+)
 
 func main() {
 
-    f,err := os.Open("myapp.log")
+	f, err := os.Open("myapp.log")
 
-    if err !=nil {
-        log.Fatal(err)
-    }
+	if err != nil {
+		log.Fatal(err)
+	}
 
-    defer f.Close()
+	defer f.Close()
 
-    r:= bufio.NewReader(f)
+	r := bufio.NewReader(f)
 
-    for {
-        s,err:= r.ReadString('\n')
-        if err !=nil {
-            break
-        }
+	for {
+		s, err := r.ReadString('\n')
+		if err != nil {
+			break
+		}
 
-        if strings.Contains(s, "ERROR"){
-            fmt.Println(s)
-        }
-    }
-
+		if strings.Contains(s, "ERROR") {
+			fmt.Println(s)
+		}
+	}
 
 }
-
-
-

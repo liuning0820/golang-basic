@@ -13,7 +13,7 @@ func main() {
     var sum int32 = sum(3,4)
     fmt.Println(sum)
 
-    println(15==0xF);
+    println(15==0xF)
 
 
 
