@@ -108,3 +108,10 @@ In VSCode, **Ctrl+Shift+P** to Open "Go:Install/Update Tool" and install the gol
 ## Functions
 
 ## Controlling Program Flow
+
+
+
+## Resources
+
+https://gobyexample.com
+https://studygolang.gitbook.io/learn-go-with-tests/
