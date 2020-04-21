@@ -100,6 +100,16 @@ In VSCode, **Ctrl+Shift+P** to Open "Go:Install/Update Tool" and install the gol
 - Add import
 - Organize import 
 
+## go mod
+
+```sh
+
+go mod init github.com/liuning0820/golang-basic
+# run the module
+go run github.com/liuning0820/golang-basic
+
+```
+
 
 ## Working with Primitive Data Type
 

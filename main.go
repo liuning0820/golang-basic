@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
     fmt.Printf("hello, world\n")
-    fmt.Println("hello, again.")
+    fmt.Println("hello, Gophers!")
 
     // short variables declaration
     lang, year := "Go Language", "2017"
