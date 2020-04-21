@@ -1,6 +1,6 @@
 package primitivedatatype
 
-func play_with_pointer() {
+func playWithPointer() {
 
 	var firstName *string = new(string)
 	*firstName = "Arthur"

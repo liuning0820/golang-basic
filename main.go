@@ -1,8 +1,9 @@
 package main
 
 import (
-    "fmt"
-    "github.com/liuning0820/golang-basic/primitivedatatype"
+	"fmt"
+
+	"./primitivedatatype"
 )
 
 func main() {
@@ -47,10 +48,6 @@ func main() {
 
     secondName ="Jerry"
     fmt.Println(ptr, *ptr)
-
-    
-
-
 
 
 }
