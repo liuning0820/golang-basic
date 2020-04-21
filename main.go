@@ -50,7 +50,8 @@ func main() {
     secondName ="Jerry"
     fmt.Println(ptr, *ptr)
 
-    
+    var mathCal = math.add(1,2);
+    println(mathCal)
 
 
 }
