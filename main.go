@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+    "fmt"
+    "github.com/liuning0820/golang-basic/primitivedatatype"
+)
 
 func main() {
     fmt.Printf("hello, world\n")
@@ -14,6 +17,39 @@ func main() {
     fmt.Println(sum)
 
     println(15==0xF)
+
+    // play with Pointer
+    // declare and dereference 
+
+    // var firstName *string
+    // firstName = "Arthur"
+    // println(firstName)
+
+    // var firstName *string
+    // *firstName = "Arthur"
+    // println(firstName)
+
+
+    // var firstName *string = new(string)
+    // *firstName = "Arthur"
+    // println(firstName)
+
+    var firstName *string = new(string)
+    *firstName = "Arthur"
+    println(*firstName)
+
+    //address
+    secondName :="Toby"
+    fmt.Println(secondName)
+
+    ptr := &secondName
+    fmt.Println(ptr, *ptr)
+
+    secondName ="Jerry"
+    fmt.Println(ptr, *ptr)
+
+    
+
 
 
 
