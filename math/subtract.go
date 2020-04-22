@@ -1,6 +1,7 @@
 package math
 
-import "fmt"
-func subtract(n1, n2 int) int {
+
+// Subtract two numbers
+func Subtract(n1, n2 int) int {
     return n1 - n2
 }

@@ -2,9 +2,7 @@ package main
 
 import (
 	"fmt"
-
-    "./primitivedatatype"
-    "./math"
+    "github.com/liuning0820/golang-basic/math"
 )
 
 func main() {
@@ -50,7 +48,7 @@ func main() {
     secondName ="Jerry"
     fmt.Println(ptr, *ptr)
 
-    var mathCal = math.add(1,2);
+    var mathCal = math.Add(1,2)
     println(mathCal)
 
 

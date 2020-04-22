@@ -117,6 +117,8 @@ go run github.com/liuning0820/golang-basic
 
 ## Functions
 
+- 函数名首字母要大写
+
 ## Controlling Program Flow
 
 
