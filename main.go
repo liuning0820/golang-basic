@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
     "github.com/liuning0820/golang-basic/math"
+    "github.com/liuning0820/golang-basic/primitivedatatype"
 )
 
 func main() {
@@ -50,6 +51,9 @@ func main() {
 
     var mathCal = math.Add(1,2)
     println(mathCal)
+
+    var pointerVar = primitivedatatype.Pointer()
+    fmt.Println(pointerVar)
 
 
 }
