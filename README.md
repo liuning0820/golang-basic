@@ -9,6 +9,7 @@ TOC:
 
 ## Install in Linux
 
+Download the Go from <https://gomirrors.org/>
 
 ```sh
 
