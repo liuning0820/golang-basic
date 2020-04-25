@@ -27,8 +27,6 @@ export PATH=$PATH:/usr/local/go/bin
 # or simply run below line
 echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.profile && source ~/.profile
 
-
-
 go version
 
 ```
