@@ -55,6 +55,10 @@ func main() {
     var pointerVar = primitivedatatype.Pointer()
     fmt.Println(pointerVar)
 
+    
+    var arrayVar = primitivedatatype.ArrayDemo()
+    fmt.Println(arrayVar)
+
 
 }
 

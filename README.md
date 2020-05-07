@@ -43,6 +43,9 @@ go env -w GO111MODULE=on
 go env -w GOPROXY="https://goproxy.io,direct"
 
 ```
+
+## Install on Mac
+
 ## Run go program
 
 ### go build to Run
@@ -124,9 +127,13 @@ go run github.com/liuning0820/golang-basic
 
 ## Resources
 
-https://gobyexample.com
+- <https://gobyexample.com>
+
 https://studygolang.gitbook.io/learn-go-with-tests/
 
+- <https://blog.golang.org/pprof>
+  https://blog.golang.org/slices-intro
 
+https://go.dev/
 
-hu0hufan
+https://pkg.go.dev/
