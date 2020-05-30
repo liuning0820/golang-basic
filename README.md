@@ -127,10 +127,13 @@ If no GOPATH is set, it is assumed to be $HOME/go on Unix systems and %USERPROFI
 
 ```sh
 
-# set GOPATH
-export GOPATH=$HOME/golang-basic
+# set WorkSpace GOPATH
+export GOPATH=$PWD
 cd $GOPATH && mkdir /bin && mkdir /pkg
 export PATH=$GOPATH/bin:$PATH
+
+# Check the GOPATH setting
+go env
 
 ```
 
