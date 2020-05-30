@@ -1,7 +1,7 @@
 package primitivedatatype
 
-// ArrayDemo - Play With Array
-func ArrayDemo() int {
+// Array - Play With Array
+func Array() int {
 
 	var a [4]int
 	a[0] = 1

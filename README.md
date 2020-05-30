@@ -87,11 +87,6 @@ go install
 ```
 
 
-
-
-
-
-
 ## Code Format Tools
 
 In VSCode, **Ctrl+Shift+P** to Open "Go:Install/Update Tool" and install the golang format tools:
@@ -123,17 +118,33 @@ go run github.com/liuning0820/golang-basic
 
 ## Controlling Program Flow
 
+## GOPATH vs GOROOT vs GOBIN
+
+导入路径是一个字符串，用户可以用它来导入包。它指定了包源码所在的目录（相对于 $GOROOT/src/pkg 或 `$GOPATH/src`)。
+
+**GOPATH** environment variable specifies the location of your workspace.
+If no GOPATH is set, it is assumed to be $HOME/go on Unix systems and %USERPROFILE%\go on Windows.
+
+**GOROOT** is a variable that defines where your Go SDK is located. You do not need to change this variable, unless you plan to use different Go versions.
+
+
 
 
 ## Resources
 
-- <https://gobyexample.com>
+- [ ] <https://gobyexample.com>
 
-https://studygolang.gitbook.io/learn-go-with-tests/
+- [ ] https://tour.go-zh.org/methods/1
 
-- <https://blog.golang.org/pprof>
-  https://blog.golang.org/slices-intro
+- [ ] https://go-zh.org/pkg/net/http/
 
-https://go.dev/
+- [ ] <https://studygolang.gitbook.io/learn-go-with-tests/>
 
-https://pkg.go.dev/
+- [ ] <https://blog.golang.org/pprof>
+- [ ] <https://blog.golang.org/slices-intro>
+
+- [ ] <https://go.dev/>
+
+- [ ] <https://pkg.go.dev/>
+
+- [ ] <https://github.com/golang/go/wiki/>
