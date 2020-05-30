@@ -136,9 +136,6 @@ export PATH=$GOPATH/bin:$PATH
 
 **GOROOT** is a variable that defines where your Go SDK is located. You do not need to change this variable, unless you plan to use different Go versions. default /usr/local/go
 
-
-
-
 ## Resources
 
 - [ ] <https://gobyexample.com>
