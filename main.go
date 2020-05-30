@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/liuning0820/golang-basic/math"
-	"github.com/liuning0820/golang-basic/primitivedatatype"
+	"github.com/liuning0820/golang-basic/src/math"
+	"github.com/liuning0820/golang-basic/src/primitivedatatype"
 )
 
 func main() {

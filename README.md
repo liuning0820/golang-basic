@@ -125,7 +125,16 @@ go run github.com/liuning0820/golang-basic
 **GOPATH** environment variable specifies the location of your workspace.
 If no GOPATH is set, it is assumed to be $HOME/go on Unix systems and %USERPROFILE%\go on Windows.
 
-**GOROOT** is a variable that defines where your Go SDK is located. You do not need to change this variable, unless you plan to use different Go versions.
+```sh
+
+# set GOPATH
+export GOPATH=$HOME/golang-basic
+cd $GOPATH && mkdir /bin && mkdir /pkg
+export PATH=$GOPATH/bin:$PATH
+
+```
+
+**GOROOT** is a variable that defines where your Go SDK is located. You do not need to change this variable, unless you plan to use different Go versions. default /usr/local/go
 
 
 
