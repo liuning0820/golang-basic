@@ -52,9 +52,9 @@ go env -w GOPROXY="https://goproxy.io,direct"
 
 ```sh
 
-go build hello.go
+go build main.go
 
-./hello
+./main
 
 
 ```
