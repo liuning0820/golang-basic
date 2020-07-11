@@ -13,9 +13,20 @@ Download the Go from <https://gomirrors.org/>
 
 ```sh
 
+curl -O https://gomirrors.org/dl/go/go1.14.4.linux-amd64.tar.gz
+
+
 #Download the archive and extract it into /usr/local, creating a Go tree in /usr/local/go. For example:
 
-tar -C /usr/local -xzf go$VERSION.$OS-$ARCH.tar.gz
+sudo tar -C /usr/local -xzf go$VERSION.$OS-$ARCH.tar.gz
+
+# Create workspace $(GOPATH) and add it's /bin into $PATH
+mkdir -p $HOME/go/{bin,src}
+
+nano ~/.profile
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+source ~/.profile
 
 # Add /usr/local/go/bin to the PATH environment variable. You can do this by adding this line to your /etc/profile (for a system-wide installation) or $HOME/.profile:
 
