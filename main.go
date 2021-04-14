@@ -1,15 +1,102 @@
 package main
 
 import (
+	"errors"
 	"fmt"
+	"time"
 
-	"github.com/liuning0820/golang-basic/src/math"
-	"github.com/liuning0820/golang-basic/src/primitivedatatype"
+	"rsc.io/quote"
+
+	"github.com/liuning0820/golang-basic/math"
+	"github.com/liuning0820/golang-basic/datatype"
+	hotel "github.com/liuning0820/golang-basic/hotel"
+	parent "github.com/liuning0820/golang-basic/father"
+	child "github.com/liuning0820/golang-basic/son"
+
 )
 
+
+
+func e(v int) (int, error) {
+	if v == 0 {
+		return 0, errors.New("Zero cannot be used")
+	} else {
+		return 2 * v, nil
+	}
+}
+
+func sum(a int32, b int32) (s int32) {
+	s = a + b
+	return s
+
+}
+
+
+// new type "Fruit"
+// underlying type: struct
+type Fruit struct {
+	Name string
+	Price float32
+}
+
 func main() {
+
+	now := time.Now()
+	fmt.Println(now.UTC())
+
+	f := new(parent.Father)
+	fmt.Println(f.Data("Mr. Jeremy Maclin"))
+
+	c := new(child.Son)
+	fmt.Println(c.Data("Riley Maclin"))
+
+	var x int32
+	var y uint8
+
+	x = 512
+
+	y = uint8(x)
+
+	println(x, y)
+
 	fmt.Printf("hello, world\n")
 	fmt.Println("hello, Gophers!")
+
+	// log.Fatal("Exception occured!")
+	//log.Panicln("A panic wiht a newline!")
+
+	//var apple Fruit
+	var apple = Fruit{Name: "Apple", Price: 12.5}
+	fmt.Println(apple)
+	fmt.Println(apple.Price)
+
+	pear:= Fruit{
+		Name: "Pear",
+		Price: 8,
+	}
+
+	fmt.Println("The ",pear.Name, "price is ", pear.Price)
+
+	var banana = new(Fruit)
+	banana.Name = "Banana"
+	fmt.Println(banana)
+
+	hotel := hotel.Hotel{
+		Country: Country{
+			Name: "France",
+			CapitalCity:"Paris",
+		}
+	}
+
+	v, err := e(0)
+
+	if err != nil {
+
+		fmt.Println(err, v) // Zero cannot be used 0
+
+	}
+
+	fmt.Println(quote.Go())
 
 	// short variables declaration
 	lang, year := "Go Language", "2017"
@@ -55,19 +142,12 @@ func main() {
 	a, b := math.Swap("hello", "world")
 	fmt.Println(a, b)
 
-	var pointerVar = primitivedatatype.Pointer()
+	var pointerVar = datatype.Pointer()
 	fmt.Println(pointerVar)
 
-	var arrayVar = primitivedatatype.Array()
+	var arrayVar = datatype.Array()
 	fmt.Println(arrayVar)
 
-	primitivedatatype.Slices()
-
-}
-
-// Function
-func sum(a int32, b int32) (s int32) {
-	s = a + b
-	return s
+	datatype.Slices()
 
 }

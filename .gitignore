@@ -1,0 +1,6 @@
+.idea/.gitignore
+.idea/golang-basic.iml
+.idea/modules.xml
+.idea/vcs.xml
+.vscode/launch.json
+src/database.go

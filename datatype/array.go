@@ -1,4 +1,4 @@
-package primitivedatatype
+package datatype
 
 // Array - Play With Array
 func Array() int {

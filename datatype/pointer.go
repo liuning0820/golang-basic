@@ -1,4 +1,4 @@
-package primitivedatatype
+package datatype
 
 func Pointer() string {
 

@@ -1,4 +1,4 @@
-package primitivedatatype
+package datatype
 
 import "fmt"
 

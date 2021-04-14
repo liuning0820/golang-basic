@@ -2,7 +2,7 @@
 
 TOC:
 
-- [Install](#install-in-linux)
+- [Install-In-Linux](#install-in-linux)
   - [Set modules mirror proxy](#set-modules-mirror-proxy)
 - [Run go program](#run-go-program)
 - [Edit and Format](#code-format-tools)
@@ -56,6 +56,12 @@ go env -w GOPROXY="https://goproxy.io,direct"
 ```
 
 ## Install on Mac
+```shell
+
+$ go version
+
+```
+
 
 ## Run go program
 
@@ -108,15 +114,7 @@ In VSCode, **Ctrl+Shift+P** to Open "Go:Install/Update Tool" and install the gol
 - Add import
 - Organize import 
 
-## go mod
 
-```sh
-
-go mod init github.com/liuning0820/golang-basic
-# run the module
-go run github.com/liuning0820/golang-basic
-
-```
 
 
 ## Working with Primitive Data Type
@@ -129,9 +127,8 @@ go run github.com/liuning0820/golang-basic
 
 ## Controlling Program Flow
 
-## GOPATH vs GOROOT vs GOBIN
+## GOPATH vs GOROOT vs GOBIN vs Go Module
 
-导入路径是一个字符串，用户可以用它来导入包。它指定了包源码所在的目录（相对于 $GOROOT/src/pkg 或 `$GOPATH/src`)。
 
 **GOPATH** environment variable specifies the location of your workspace.
 If no GOPATH is set, it is assumed to be $HOME/go on Unix systems and %USERPROFILE%\go on Windows.
@@ -150,9 +147,42 @@ go env
 
 **GOROOT** is a variable that defines where your Go SDK is located. You do not need to change this variable, unless you plan to use different Go versions. default /usr/local/go
 
+
+## modular programming, Go packages, Go modules
+
+modular programming, go module is a collection of packages stored in a file tree with a go.mod file.
+### go.mod
+
+```sh
+
+go mod init github.com/liuning0820/golang-basic
+# run the module
+go run github.com/liuning0820/golang-basic
+
+# tidy: add missing and remove unused modules
+go mod tidy
+
+```
+
+### Package initialization
+
+Package initialization takes place into **init** function.
+
+
+
+
+
+## BDD Testing Framework for Go 
+
+https://github.com/onsi/ginkgo
+
 ## Resources
 
+- [x] <https://www.practical-go-lessons.com>
+- [] <https://golang.google.cn/>
+
 - [ ] <https://gobyexample.com>
+- [ ] <https://golangdocs.com/>
 
 - [ ] https://tour.go-zh.org/methods/1
 
@@ -165,6 +195,10 @@ go env
 
 - [ ] <https://go.dev/>
 
-- [ ] <https://pkg.go.dev/>
+- [](https://pkg.go.dev/)
+
+- [ Discover Packages ](https://pkg.go.dev/)
+
+- [](https://play-with-go.dev/go-fundamentals_go115_en/)
 
 - [ ] <https://github.com/golang/go/wiki/>
