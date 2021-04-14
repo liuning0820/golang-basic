@@ -9,9 +9,6 @@ import (
 
 	"github.com/liuning0820/golang-basic/math"
 	"github.com/liuning0820/golang-basic/datatype"
-	hotel "github.com/liuning0820/golang-basic/hotel"
-	parent "github.com/liuning0820/golang-basic/father"
-	child "github.com/liuning0820/golang-basic/son"
 
 )
 
@@ -44,12 +41,6 @@ func main() {
 	now := time.Now()
 	fmt.Println(now.UTC())
 
-	f := new(parent.Father)
-	fmt.Println(f.Data("Mr. Jeremy Maclin"))
-
-	c := new(child.Son)
-	fmt.Println(c.Data("Riley Maclin"))
-
 	var x int32
 	var y uint8
 
@@ -81,12 +72,6 @@ func main() {
 	banana.Name = "Banana"
 	fmt.Println(banana)
 
-	hotel := hotel.Hotel{
-		Country: Country{
-			Name: "France",
-			CapitalCity:"Paris",
-		}
-	}
 
 	v, err := e(0)
 
