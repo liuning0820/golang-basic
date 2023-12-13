@@ -3,16 +3,15 @@ package main
 import (
 	"errors"
 	"fmt"
+	"strconv"
+	"sync"
 	"time"
 
 	"rsc.io/quote"
 
-	"github.com/liuning0820/golang-basic/math"
-	"github.com/liuning0820/golang-basic/datatype"
-
+	"github.com/liuning0820/golang-basic/src/datatype"
+	"github.com/liuning0820/golang-basic/src/datatype/v1"
 )
-
-
 
 func e(v int) (int, error) {
 	if v == 0 {
@@ -28,15 +27,82 @@ func sum(a int32, b int32) (s int32) {
 
 }
 
-
 // new type "Fruit"
 // underlying type: struct
 type Fruit struct {
-	Name string
+	Name  string
 	Price float32
 }
 
+const (
+	Bytes = 1
+	KB    = 1024
+	MB    = KB * 1024
+	GB    = MB * 1024
+	TB    = GB * 1024
+)
+
+var (
+	units       = []int{Bytes, KB, MB, GB, TB}
+	unitStrings = []string{"B", "K", "M", "G", "T"}
+)
+
+func getReduce(unit string, n int64) (float64, string) {
+	reduce := 0
+	switch unit {
+	case "B":
+		reduce = 0
+	case "K":
+		reduce = 1
+	case "M":
+		reduce = 2
+	case "G":
+		reduce = 3
+	case "T":
+		reduce = 4
+	}
+	for {
+		if reduce <= 0 {
+			break
+		}
+
+	}
+
+	return float64(n) / float64(units[reduce]), unitStrings[reduce]
+}
+
 func main() {
+
+	var result = strconv.FormatInt(13, 16)
+
+	fmt.Println(result)
+
+	val, reduceUnit := getReduce(unitStrings[1], 1000000)
+
+	fmt.Printf("val %q, reduceUnit: %q", val, reduceUnit)
+
+	fmt.Println(quote.Go())
+
+	var wg sync.WaitGroup
+	wg.Add(2)
+
+	go func() {
+		// simulate work
+		time.Sleep(10 * time.Second)
+		fmt.Println("Job1 completed")
+		wg.Done()
+	}()
+
+	go func() {
+		// simulate work
+		time.Sleep(5 * time.Second)
+		fmt.Println("Job2 completed")
+		wg.Done()
+	}()
+
+	wg.Wait()
+
+	fmt.Println("Done")
 
 	now := time.Now()
 	fmt.Println(now.UTC())
@@ -61,17 +127,16 @@ func main() {
 	fmt.Println(apple)
 	fmt.Println(apple.Price)
 
-	pear:= Fruit{
-		Name: "Pear",
+	pear := Fruit{
+		Name:  "Pear",
 		Price: 8,
 	}
 
-	fmt.Println("The ",pear.Name, "price is ", pear.Price)
+	fmt.Println("The ", pear.Name, "price is ", pear.Price)
 
 	var banana = new(Fruit)
 	banana.Name = "Banana"
 	fmt.Println(banana)
-
 
 	v, err := e(0)
 
@@ -80,8 +145,6 @@ func main() {
 		fmt.Println(err, v) // Zero cannot be used 0
 
 	}
-
-	fmt.Println(quote.Go())
 
 	// short variables declaration
 	lang, year := "Go Language", "2017"
@@ -121,16 +184,10 @@ func main() {
 	secondName = "Jerry"
 	fmt.Println(ptr, *ptr)
 
-	var mathCal = math.Add(1, 2)
-	println(mathCal)
-
-	a, b := math.Swap("hello", "world")
-	fmt.Println(a, b)
-
-	var pointerVar = datatype.Pointer()
+	var pointerVar = datatypeV1.Array()
 	fmt.Println(pointerVar)
 
-	var arrayVar = datatype.Array()
+	var arrayVar = datatypeV1.Array()
 	fmt.Println(arrayVar)
 
 	datatype.Slices()
