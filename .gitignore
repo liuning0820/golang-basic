@@ -2,6 +2,7 @@
 .idea/golang-basic.iml
 .idea/modules.xml
 .idea/vcs.xml
+.idea/
 .vscode/launch.json
 src/database.go
 

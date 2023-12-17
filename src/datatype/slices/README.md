@@ -12,4 +12,4 @@ letters := []string{"a", "b", "c", "d"}
 
 ## Reference
 
-1. <<https://blog.golang.org/slices-intro>
+1. <https://blog.golang.org/slices-intro>
